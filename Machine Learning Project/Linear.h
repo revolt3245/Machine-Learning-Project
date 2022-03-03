@@ -3,21 +3,21 @@
 #include <iostream>
 #include <Eigen/Dense>
 
+#include "Layer.h"
+
 using namespace std;
 
-class Linear
+class Linear : public Layer
 {
 public:
-	Linear(size_t input, size_t output) :input(input), output(output) { weight = Eigen::MatrixXd::Random(input, output);  bias = Eigen::MatrixXd::Random(1, output); };
+	Linear(size_t input, size_t output) :input(input), output(output), Layer("Linear") { weight = Eigen::MatrixXd::Random(input, output);  bias = Eigen::MatrixXd::Random(1, output); };
 
 	~Linear() {};
 
-	friend ostream& operator<<(ostream& os, Linear& obj);
-
-	Eigen::MatrixXd forward(Eigen::MatrixXd panIn);
-	Eigen::MatrixXd backward(Eigen::MatrixXd preDiff);
-
-	void step(double learningRate);
+	virtual Eigen::MatrixXd forward(Eigen::MatrixXd panIn) override;
+	virtual Eigen::MatrixXd backward(Eigen::MatrixXd preDiff) override;
+protected:
+	virtual ostream& printConfig(ostream& os) override;
 private:
 	Eigen::MatrixXd weight;
 	Eigen::MatrixXd bias;

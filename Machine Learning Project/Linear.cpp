@@ -1,12 +1,5 @@
 #include "Linear.h"
 
-ostream& operator<<(ostream& os, Linear& obj)
-{
-    os << "Linear(" << obj.input << ", " << obj.output << ")";
-
-    return os;
-}
-
 Eigen::MatrixXd Linear::forward(Eigen::MatrixXd panIn)
 {
     auto batchSize = panIn.rows();
@@ -18,16 +11,22 @@ Eigen::MatrixXd Linear::forward(Eigen::MatrixXd panIn)
 
 Eigen::MatrixXd Linear::backward(Eigen::MatrixXd preDiff)
 {
+    return Eigen::MatrixXd();
+}
+
+ostream& Linear::printConfig(ostream& os)
+{
+    os << this->getName() << "(" << this->input << ", " << this->output << ")";
+
+    return os;
+}
+
+Eigen::MatrixXd Linear::backward(Eigen::MatrixXd preDiff)
+{
     auto batchSize = preDiff.rows();
     this->biasGrad = Eigen::MatrixXd::Ones(1, batchSize) * preDiff;
 
     this->weightGrad *= preDiff;
 
     return preDiff * this->weight.transpose();
-}
-
-void Linear::step(double learningRate)
-{
-    this->weight -= learningRate * this->weightGrad;
-    this->bias -= learningRate * this->biasGrad;
 }
