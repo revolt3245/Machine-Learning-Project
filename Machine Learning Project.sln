@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Machine Learning Project", "Machine Learning Project\Machine Learning Project.vcxproj", "{337114EE-F306-414A-9D69-F02557ED120A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Differentiable Programming", "Differentiable Programming\Differentiable Programming.vcxproj", "{A2B473F8-41B3-493D-93BF-931F5BF592BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{337114EE-F306-414A-9D69-F02557ED120A}.Release|x64.Build.0 = Release|x64
 		{337114EE-F306-414A-9D69-F02557ED120A}.Release|x86.ActiveCfg = Release|Win32
 		{337114EE-F306-414A-9D69-F02557ED120A}.Release|x86.Build.0 = Release|Win32
+		{A2B473F8-41B3-493D-93BF-931F5BF592BE}.Debug|x64.ActiveCfg = Debug|x64
+		{A2B473F8-41B3-493D-93BF-931F5BF592BE}.Debug|x64.Build.0 = Debug|x64
+		{A2B473F8-41B3-493D-93BF-931F5BF592BE}.Debug|x86.ActiveCfg = Debug|Win32
+		{A2B473F8-41B3-493D-93BF-931F5BF592BE}.Debug|x86.Build.0 = Debug|Win32
+		{A2B473F8-41B3-493D-93BF-931F5BF592BE}.Release|x64.ActiveCfg = Release|x64
+		{A2B473F8-41B3-493D-93BF-931F5BF592BE}.Release|x64.Build.0 = Release|x64
+		{A2B473F8-41B3-493D-93BF-931F5BF592BE}.Release|x86.ActiveCfg = Release|Win32
+		{A2B473F8-41B3-493D-93BF-931F5BF592BE}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

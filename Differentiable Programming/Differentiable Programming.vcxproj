@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{337114ee-f306-414a-9d69-f02557ed120a}</ProjectGuid>
-    <RootNamespace>MachineLearningProject</RootNamespace>
+    <ProjectGuid>{a2b473f8-41b3-493d-93bf-931f5bf592be}</ProjectGuid>
+    <RootNamespace>DifferentiableProgramming</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -141,19 +141,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CELoss.cpp" />
-    <ClCompile Include="Layer.cpp" />
-    <ClCompile Include="Linear.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MSELoss.cpp" />
-    <ClCompile Include="Sigmoid.cpp" />
+    <ClCompile Include="Parameter.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CELoss.h" />
-    <ClInclude Include="Layer.h" />
-    <ClInclude Include="Linear.h" />
-    <ClInclude Include="MSELoss.h" />
-    <ClInclude Include="Sigmoid.h" />
+    <ClInclude Include="Parameter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
