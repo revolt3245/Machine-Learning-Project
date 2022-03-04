@@ -150,7 +150,6 @@
     <ClCompile Include="Optimizer.cpp" />
     <ClCompile Include="SGD.cpp" />
     <ClCompile Include="Sigmoid.cpp" />
-    <ClCompile Include="Softmax.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CELoss.h" />
@@ -161,7 +160,6 @@
     <ClInclude Include="Optimizer.h" />
     <ClInclude Include="SGD.h" />
     <ClInclude Include="Sigmoid.h" />
-    <ClInclude Include="Softmax.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
