@@ -3,19 +3,21 @@
 #include <iostream>
 #include <Eigen/Dense>
 
+#include "Criterion.h"
+
 using namespace std;
 
-class MSELoss
+class MSELoss : public Criterion
 {
 public:
-	MSELoss() {};
+	MSELoss():Criterion("MSELoss") {};
 
 	~MSELoss() {};
 
-	friend ostream& operator<<(ostream& os, MSELoss& obj);
+	virtual double forward(Eigen::MatrixXd Pred, Eigen::MatrixXd Actual) override;
+	virtual Eigen::MatrixXd backward() override;
 
-	double forward(Eigen::MatrixXd Pred, Eigen::MatrixXd Actual);
-	Eigen::MatrixXd backward();
+	virtual ostream& printConfig(ostream& os) override;
 private:
 	Eigen::MatrixXd Diff;
 };

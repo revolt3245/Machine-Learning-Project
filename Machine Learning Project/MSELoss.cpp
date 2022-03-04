@@ -24,3 +24,10 @@ Eigen::MatrixXd MSELoss::backward()
 {
     return this->Diff;
 }
+
+ostream& MSELoss::printConfig(ostream& os)
+{
+    os << this->getName();
+
+    return os;
+}

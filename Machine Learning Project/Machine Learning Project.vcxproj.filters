@@ -33,6 +33,9 @@
     <ClCompile Include="CELoss.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Criterion.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Linear.h">
@@ -48,6 +51,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="CELoss.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Criterion.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
