@@ -13,48 +13,90 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="헤더 파일\Criterion">
+      <UniqueIdentifier>{0d800041-d64f-42de-a1c6-e76a627db4b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Layer">
+      <UniqueIdentifier>{a360e60c-0b72-4263-ae24-65b7faefa6c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Criterion">
+      <UniqueIdentifier>{7999c86e-ef1c-4abd-88c9-94c714002cfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Layer">
+      <UniqueIdentifier>{876095f6-95ee-4df0-8754-d70a699f3a07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Layer\Learnable">
+      <UniqueIdentifier>{b413e29d-70cc-4e46-adb0-bd0a9b50ff1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Layer\Learnable">
+      <UniqueIdentifier>{4dd21086-1ac2-44e2-b4bd-80080b4b6289}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Layer\Activation">
+      <UniqueIdentifier>{2c2873c6-6fe6-405e-a7ee-f6299d8571f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Layer\Activation">
+      <UniqueIdentifier>{17128064-9324-428c-b9f3-105c71e07527}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Optimizer">
+      <UniqueIdentifier>{e9cea756-e3da-4e69-aa89-b8f77354d2b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Optimizer">
+      <UniqueIdentifier>{42ce0cfb-efdc-40bd-ab4c-f218236bd5c1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Linear.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="MSELoss.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Layer.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Sigmoid.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="CELoss.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Criterion</Filter>
     </ClCompile>
     <ClCompile Include="Criterion.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Criterion</Filter>
+    </ClCompile>
+    <ClCompile Include="MSELoss.cpp">
+      <Filter>소스 파일\Criterion</Filter>
+    </ClCompile>
+    <ClCompile Include="Linear.cpp">
+      <Filter>소스 파일\Layer\Learnable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sigmoid.cpp">
+      <Filter>소스 파일\Layer\Activation</Filter>
+    </ClCompile>
+    <ClCompile Include="Layer.cpp">
+      <Filter>소스 파일\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="Optimizer.cpp">
+      <Filter>소스 파일\Optimizer</Filter>
+    </ClCompile>
+    <ClCompile Include="SGD.cpp">
+      <Filter>소스 파일\Optimizer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Linear.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="MSELoss.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Layer.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Sigmoid.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="CELoss.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Criterion</Filter>
     </ClInclude>
     <ClInclude Include="Criterion.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Criterion</Filter>
+    </ClInclude>
+    <ClInclude Include="MSELoss.h">
+      <Filter>헤더 파일\Criterion</Filter>
+    </ClInclude>
+    <ClInclude Include="Linear.h">
+      <Filter>헤더 파일\Layer\Learnable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sigmoid.h">
+      <Filter>헤더 파일\Layer\Activation</Filter>
+    </ClInclude>
+    <ClInclude Include="Layer.h">
+      <Filter>헤더 파일\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="Optimizer.h">
+      <Filter>헤더 파일\Optimizer</Filter>
+    </ClInclude>
+    <ClInclude Include="SGD.h">
+      <Filter>헤더 파일\Optimizer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
