@@ -5,6 +5,7 @@
 
 #include "hCriterion.h"
 #include "hLayer.h"
+#include "hOptimizer.h"
 
 using namespace std;
 
@@ -12,6 +13,7 @@ int main() {
 	Linear L1(3, 4);
 	Softmax Soft1;
 	CELoss criterion;
+	SGD optim(1e-2, 1e-4);
 
 	Eigen::MatrixXd X(8, 3);
 	Eigen::MatrixXd Y(8, 4);
@@ -45,7 +47,7 @@ int main() {
 		Diff = Soft1.backward(Diff);
 		L1.backward(Diff);
 
-		L1.step(1e-1);
+		optim.step(&L1);
 	}
 
 	cout << Soft1.forward(L1.forward(X)) << "\n";

@@ -4,7 +4,7 @@ Eigen::MatrixXd Linear::forward(Eigen::MatrixXd panIn)
 {
     auto batchSize = panIn.rows();
     auto Param = this->getParam();
-    auto Grad = this->getGrad(); * this->bias;
+    auto Grad = this->getGrad();
     auto panOut = panIn * (*Param[0]) + Eigen::MatrixXd::Ones(batchSize, 1) * (*Param[1]);
 
     (*Grad[0]) = panIn.transpose();
