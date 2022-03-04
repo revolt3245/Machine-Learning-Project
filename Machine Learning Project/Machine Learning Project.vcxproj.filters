@@ -43,6 +43,21 @@
     <Filter Include="헤더 파일\Optimizer">
       <UniqueIdentifier>{42ce0cfb-efdc-40bd-ab4c-f218236bd5c1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\Criterion\Include">
+      <UniqueIdentifier>{ed40bc49-fa22-45b8-8829-18ebd11a96ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Layer\Include">
+      <UniqueIdentifier>{456466aa-000f-4f60-b62e-8caccfccb5ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Layer\Learnable\Include">
+      <UniqueIdentifier>{c986bd10-3f08-4701-9702-2ce821ac5b84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Layer\Activation\Include">
+      <UniqueIdentifier>{b4124461-5472-435c-84aa-b1c464034eab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Optimizer\Include">
+      <UniqueIdentifier>{c54bcc3b-0a13-48e3-ba97-226005ec4987}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -103,6 +118,21 @@
     </ClInclude>
     <ClInclude Include="Softmax.h">
       <Filter>헤더 파일\Layer\Activation</Filter>
+    </ClInclude>
+    <ClInclude Include="hCriterion.h">
+      <Filter>헤더 파일\Criterion\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="hLayer.h">
+      <Filter>헤더 파일\Layer\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="hLearnable.h">
+      <Filter>헤더 파일\Layer\Learnable\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="hActivation.h">
+      <Filter>헤더 파일\Layer\Activation\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="hOptimizer.h">
+      <Filter>헤더 파일\Optimizer\Include</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

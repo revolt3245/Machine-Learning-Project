@@ -3,9 +3,8 @@
 #include <vector>
 #include <random>
 
-#include "Linear.h"
-#include "Sigmoid.h"
-#include "CELoss.h"
+#include "hCriterion.h"
+#include "hLayer.h"
 
 using namespace std;
 

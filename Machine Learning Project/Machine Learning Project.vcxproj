@@ -155,7 +155,12 @@
   <ItemGroup>
     <ClInclude Include="CELoss.h" />
     <ClInclude Include="Criterion.h" />
+    <ClInclude Include="hActivation.h" />
+    <ClInclude Include="hCriterion.h" />
+    <ClInclude Include="hLearnable.h" />
+    <ClInclude Include="hOptimizer.h" />
     <ClInclude Include="Layer.h" />
+    <ClInclude Include="hLayer.h" />
     <ClInclude Include="Linear.h" />
     <ClInclude Include="MSELoss.h" />
     <ClInclude Include="Optimizer.h" />

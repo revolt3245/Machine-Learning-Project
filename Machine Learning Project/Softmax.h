@@ -20,6 +20,6 @@ public:
 protected:
     virtual ostream& printConfig(ostream& os) override;
 private:
-    Eigen::MatrixXd Diff;
+    Eigen::MatrixXd panOut;
 };
 
