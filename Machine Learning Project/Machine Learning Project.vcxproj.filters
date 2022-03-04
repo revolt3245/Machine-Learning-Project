@@ -90,6 +90,9 @@
     <ClCompile Include="Softmax.cpp">
       <Filter>소스 파일\Layer\Activation</Filter>
     </ClCompile>
+    <ClCompile Include="Learnable.cpp">
+      <Filter>소스 파일\Layer\Learnable</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CELoss.h">
@@ -133,6 +136,9 @@
     </ClInclude>
     <ClInclude Include="hOptimizer.h">
       <Filter>헤더 파일\Optimizer\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Learnable.h">
+      <Filter>헤더 파일\Layer\Learnable</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

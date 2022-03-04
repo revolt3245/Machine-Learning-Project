@@ -144,6 +144,7 @@
     <ClCompile Include="CELoss.cpp" />
     <ClCompile Include="Criterion.cpp" />
     <ClCompile Include="Layer.cpp" />
+    <ClCompile Include="Learnable.cpp" />
     <ClCompile Include="Linear.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MSELoss.cpp" />
@@ -161,6 +162,7 @@
     <ClInclude Include="hOptimizer.h" />
     <ClInclude Include="Layer.h" />
     <ClInclude Include="hLayer.h" />
+    <ClInclude Include="Learnable.h" />
     <ClInclude Include="Linear.h" />
     <ClInclude Include="MSELoss.h" />
     <ClInclude Include="Optimizer.h" />
