@@ -10,6 +10,7 @@ class Learnable :
     public Layer
 {
 public:
+    friend class Optimizer;
     Learnable(string name) 
         :Layer(name), param(0), grad(0) {};
     Learnable(string name, size_t n) 
