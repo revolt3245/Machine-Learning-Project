@@ -13,7 +13,12 @@ public:
     Learnable(string name) 
         :Layer(name), param(0), grad(0) {};
     Learnable(string name, size_t n) 
-        :Layer(name), param(n, new Eigen::MatrixXd), grad(n, new Eigen::MatrixXd) {};
+        :Layer(name), param(n), grad(n) {
+        for (int i = 0; i < n; i++) {
+            param[i] = new Eigen::MatrixXd;
+            grad[i] = new Eigen::MatrixXd;
+        }
+    };
 
     ~Learnable() {
         for (auto& p : param) {
