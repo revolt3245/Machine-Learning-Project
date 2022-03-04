@@ -5,7 +5,7 @@ Eigen::MatrixXd Softmax::forward(Eigen::MatrixXd panIn)
 	auto inputSize = panIn.cols();
 	Eigen::MatrixXd expPanIn = panIn.array().exp().matrix();
 
-	Eigen::MatrixXd Sum = expPanIn * Eigen::MatrixXd::Ones(inputSize, 1);
+	Eigen::MatrixXd Sum = expPanIn * Eigen::MatrixXd::Ones(inputSize, 1) * Eigen::MatrixXd::Ones(1, inputSize);
 
 	this->panOut = (expPanIn.array() / Sum.array()).matrix();
 

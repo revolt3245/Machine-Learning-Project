@@ -26,9 +26,9 @@ double CELoss::forward(Eigen::MatrixXd pred, Eigen::MatrixXd actual)
 
 		Eigen::MatrixXd positive = (actual.array() * pred.array().log()).matrix();
 
-		this->Diff = (actual.array() / pred.array()).matrix();
+		this->Diff = -(actual.array() / pred.array()).matrix();
 
-		auto cost = Eigen::MatrixXd::Ones(1, batchSize) * positive * Eigen::MatrixXd::Ones(outputSize, 1) / batchSize;
+		auto cost = -Eigen::MatrixXd::Ones(1, batchSize) * positive * Eigen::MatrixXd::Ones(outputSize, 1) / batchSize;
 
 		return cost(0);
 	}

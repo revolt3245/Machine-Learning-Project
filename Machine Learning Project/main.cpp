@@ -9,37 +9,45 @@
 using namespace std;
 
 int main() {
-	Linear L1(2, 1);
-	Sigmoid Sig1;
-	CELoss criterion(CELoss::CELossType::sigmoid);
+	Linear L1(3, 4);
+	Softmax Soft1;
+	CELoss criterion;
 
-	Eigen::MatrixXd X(4, 2);
-	Eigen::MatrixXd Y(4, 1);
-	X << 0, 0,
-		0, 1,
-		1, 0,
-		1, 1;
+	Eigen::MatrixXd X(8, 3);
+	Eigen::MatrixXd Y(8, 4);
+	X << 0, 0, 0,
+		0, 0, 1,
+		0, 1, 0,
+		0, 1, 1,
+		1, 0, 0,
+		1, 0, 1,
+		1, 1, 0,
+		1, 1, 1;
 
-	Y << 0,
-		1,
-		1,
-		1;
+	Y << 1, 0, 0, 0,
+		0, 1, 0, 0,
+		0, 1, 0, 0,
+		0, 0, 1, 0,
+		0, 1, 0, 0,
+		0, 0, 1, 0,
+		0, 0, 1, 0,
+		0, 0, 0, 1;
 
-	for (int i = 0; i < 100000; i++) {
+	for (int i = 0; i < 10000; i++) {
 		auto Pred = L1.forward(X);
-		Pred = Sig1.forward(Pred);
+		Pred = Soft1.forward(Pred);
 
 		auto cost = criterion.forward(Pred, Y);
 
 		if ((i + 1) % 10 == 0) cout << "epoch " << i + 1 << " : " << cost << "\n";
 
 		auto Diff = criterion.backward();
-		Diff = Sig1.backward(Diff);
+		Diff = Soft1.backward(Diff);
 		L1.backward(Diff);
 
-		L1.step(1e-2);
+		L1.step(1e-1);
 	}
 
-	cout << Sig1.forward(L1.forward(X)) << "\n";
+	cout << Soft1.forward(L1.forward(X)) << "\n";
 	return 0;
 }
