@@ -17,3 +17,13 @@ ostream& Sigmoid::printConfig(ostream& os)
 
     return os;
 }
+
+ostream& Sigmoid::printConfig(ostream& os, unsigned int level)
+{
+    for (auto i = 0; i < level; i++) {
+        os << "\t";
+    }
+    os << this->getName();
+
+    return os;
+}

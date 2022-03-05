@@ -18,6 +18,16 @@ ostream& Linear::printConfig(ostream& os)
     return os;
 }
 
+ostream& Linear::printConfig(ostream& os, unsigned int level)
+{
+    for (auto i = 0; i < level; i++) {
+        os << "\t";
+    }
+    os << this->getName() << "(" << this->input << ", " << this->output << ")";
+
+    return os;
+}
+
 Eigen::MatrixXd Linear::backward(Eigen::MatrixXd preDiff)
 {
     auto batchSize = preDiff.rows();

@@ -25,3 +25,13 @@ ostream& Softmax::printConfig(ostream& os)
 
 	return os;
 }
+
+ostream& Softmax::printConfig(ostream& os, unsigned int level)
+{
+	for (auto i = 0; i < level; i++) {
+		os << "\t";
+	}
+	os << this->getName();
+
+	return os;
+}

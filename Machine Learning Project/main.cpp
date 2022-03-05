@@ -13,7 +13,7 @@ int main() {
 	Linear L1(3, 4);
 	Softmax Soft1;
 	CELoss criterion;
-	SGD optim(1e-2, 1e-4);
+	SGD optim(1e-1, 1e-4);
 
 	Eigen::MatrixXd X(8, 3);
 	Eigen::MatrixXd Y(8, 4);

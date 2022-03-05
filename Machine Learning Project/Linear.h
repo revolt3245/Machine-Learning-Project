@@ -18,11 +18,6 @@ public:
 
 		normal_distribution<> dist(0, 1);
 
-		//weight = Eigen::MatrixXd::Random(input, output);  
-		//bias = Eigen::MatrixXd::Random(1, output); 
-		//weight = Eigen::MatrixXd::NullaryExpr(input, output, [&]() {return dist(rng); });
-		//bias = Eigen::MatrixXd::NullaryExpr(1, output, [&]() {return dist(rng); });
-
 		auto Param = getParam();
 
 		*Param[0] = Eigen::MatrixXd::NullaryExpr(input, output, [&]() {return dist(rng); });
@@ -38,15 +33,10 @@ public:
 
 	Eigen::MatrixXd getWeight();
 	Eigen::MatrixXd getBias();
-protected:
+
 	virtual ostream& printConfig(ostream& os) override;
+	virtual ostream& printConfig(ostream& os, unsigned int level) override;
 private:
-	//Eigen::MatrixXd weight;
-	//Eigen::MatrixXd bias;
-
-	//Eigen::MatrixXd weightGrad;
-	//Eigen::MatrixXd biasGrad;
-
 	size_t input;
 	size_t output;
 };

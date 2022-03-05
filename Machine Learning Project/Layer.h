@@ -8,8 +8,9 @@ using namespace std;
 class Layer
 {
 public:
-	Layer() :name() {};
-	Layer(string name) :name(name) {};
+	Layer() :name(), learnable(false) {};
+	Layer(string name) :name(name), learnable(false) {};
+	Layer(string name, bool learnable) :name(name), learnable(learnable) {};
 
 	friend class Optimizer;
 
@@ -17,10 +18,14 @@ public:
 	virtual Eigen::MatrixXd backward(Eigen::MatrixXd preDiff) = 0;
 
 	friend ostream& operator<<(ostream& os, Layer& obj);
-protected:
-	virtual ostream& printConfig(ostream& os) = 0;
 
+	virtual ostream& printConfig(ostream& os) = 0;
+	virtual ostream& printConfig(ostream& os, unsigned int level) = 0;
+
+	bool isLearnable();
+protected:
 	string getName();
 private:
 	string name;
+	bool learnable;
 };

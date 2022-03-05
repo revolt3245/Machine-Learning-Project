@@ -12,9 +12,9 @@ class Learnable :
 public:
     friend class Optimizer;
     Learnable(string name) 
-        :Layer(name), param(0), grad(0), regL2(0) {};
+        :Layer(name, true), param(0), grad(0), regL2(0) {};
     Learnable(string name, size_t n) 
-        :Layer(name), param(n), grad(n), regL2(n) {
+        :Layer(name, true), param(n), grad(n), regL2(n) {
         for (int i = 0; i < n; i++) {
             param[i] = new Eigen::MatrixXd;
             grad[i] = new Eigen::MatrixXd;
@@ -29,13 +29,16 @@ public:
             delete g;
         }
     };
-protected:
+
     vector<Eigen::MatrixXd*> getParam();
     vector<Eigen::MatrixXd*> getGrad();
     vector<double> getL2Regularization();
 
     void addParam(Eigen::MatrixXd* param);
+    void addParam(Eigen::MatrixXd* param, Eigen::MatrixXd* grad);
+
     void addParam(vector<Eigen::MatrixXd*> params);
+    void addParam(vector<Eigen::MatrixXd*> params, vector<Eigen::MatrixXd*> grads);;
     void setL2Regularization(vector<double> regL2);
     void setL2Regularization(size_t idx, double regL2);
 private:
