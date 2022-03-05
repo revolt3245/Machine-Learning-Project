@@ -1,8 +1,13 @@
 #include "Learnable.h"
 
+/*
 vector<Eigen::MatrixXd*> Learnable::getParam()
 {
 	return this->param;
+}
+
+void Learnable::addParam(Parameter* param)
+{
 }
 
 vector<Eigen::MatrixXd*> Learnable::getGrad()
@@ -56,4 +61,20 @@ void Learnable::setL2Regularization(vector<double> regL2)
 void Learnable::setL2Regularization(size_t idx, double regL2)
 {
 	this->regL2[idx] = regL2;
+}
+*/
+
+vector<Parameter*> Learnable::getParam()
+{
+	return vector<Parameter*>();
+}
+
+void Learnable::addParam(Parameter* param)
+{
+	this->param.push_back(param);
+}
+
+void Learnable::addParam(vector<Parameter*> params)
+{
+	this->param.insert(this->param.end(), params.begin(), params.end());
 }
