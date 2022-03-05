@@ -2,12 +2,23 @@
 
 Eigen::MatrixXd Serial::forward(Eigen::MatrixXd panIn)
 {
-    return Eigen::MatrixXd();
+    Eigen::MatrixXd Output = panIn;
+    for (auto l : this->Layers) {
+        Output = l->forward(Output);
+    }
+    return Output;
 }
 
 Eigen::MatrixXd Serial::backward(Eigen::MatrixXd preDiff)
 {
-    return Eigen::MatrixXd();
+    Eigen::MatrixXd Diff = preDiff;
+    auto cpyLayers = Layers;
+    reverse(cpyLayers.begin(), cpyLayers.end());
+
+    for (auto l : cpyLayers) {
+        Diff = l->backward(Diff);
+    }
+    return Diff;
 }
 
 ostream& Serial::printConfig(ostream& os)

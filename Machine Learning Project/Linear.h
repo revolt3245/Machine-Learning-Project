@@ -18,6 +18,7 @@ public:
 
 		normal_distribution<> dist(0, 1);
 
+		this->allocParam();
 		auto Param = getParam();
 
 		Param[0]->value = Eigen::MatrixXd::NullaryExpr(input, output, [&]() {return dist(rng); });
@@ -27,7 +28,12 @@ public:
 		Param[1]->regL2 = 0.0;
 	};
 
-	~Linear() {};
+	~Linear() {
+		auto Param = getParam();
+
+		delete Param[0];
+		delete Param[1];
+	};
 
 	virtual Eigen::MatrixXd forward(Eigen::MatrixXd panIn) override;
 	virtual Eigen::MatrixXd backward(Eigen::MatrixXd preDiff) override;

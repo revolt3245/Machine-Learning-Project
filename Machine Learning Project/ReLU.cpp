@@ -9,7 +9,7 @@ Eigen::MatrixXd ReLU::forward(Eigen::MatrixXd panIn)
 
 Eigen::MatrixXd ReLU::backward(Eigen::MatrixXd preDiff)
 {
-    return this->panOut;
+    return (this->panOut.array() * preDiff.array()).matrix();
 }
 
 ostream& ReLU::printConfig(ostream& os)
