@@ -3,14 +3,15 @@
 #include <iostream>
 #include <Eigen/Dense>
 
+#include "Activation.h"
+
 using namespace std;
 
-#include "Layer.h"
 class Softmax :
-    public Layer
+    public Activation
 {
 public:
-    Softmax() :Layer("Softmax") {};
+    Softmax() :Activation("Softmax") {};
 
     ~Softmax() {};
 
@@ -20,7 +21,5 @@ public:
 
     virtual ostream& printConfig(ostream& os) override;
     virtual ostream& printConfig(ostream& os, unsigned int level) override;
-private:
-    Eigen::MatrixXd panOut;
 };
 
