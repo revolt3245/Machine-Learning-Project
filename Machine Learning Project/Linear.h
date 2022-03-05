@@ -20,10 +20,6 @@ public:
 
 		auto Param = getParam();
 
-		/*
-		*Param[0] = Eigen::MatrixXd::NullaryExpr(input, output, [&]() {return dist(rng); });
-		*Param[1] = Eigen::MatrixXd::NullaryExpr(1, output, [&]() {return dist(rng); });
-		*/
 		Param[0]->value = Eigen::MatrixXd::NullaryExpr(input, output, [&]() {return dist(rng); });
 		Param[1]->value = Eigen::MatrixXd::NullaryExpr(1, output, [&]() {return dist(rng); });
 
@@ -35,8 +31,6 @@ public:
 
 	virtual Eigen::MatrixXd forward(Eigen::MatrixXd panIn) override;
 	virtual Eigen::MatrixXd backward(Eigen::MatrixXd preDiff) override;
-
-	//void step(double learningRate);
 
 	Eigen::MatrixXd getWeight();
 	Eigen::MatrixXd getBias();
