@@ -66,7 +66,7 @@ void Learnable::setL2Regularization(size_t idx, double regL2)
 
 vector<Parameter*> Learnable::getParam()
 {
-	return vector<Parameter*>();
+	return this->param;
 }
 
 void Learnable::addParam(Parameter* param)
