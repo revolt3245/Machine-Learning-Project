@@ -18,18 +18,25 @@ public:
 
 		normal_distribution<> dist(0, 1);
 
+		this->allocParam();
 		auto Param = getParam();
 
-		*Param[0] = Eigen::MatrixXd::NullaryExpr(input, output, [&]() {return dist(rng); });
-		*Param[1] = Eigen::MatrixXd::NullaryExpr(1, output, [&]() {return dist(rng); });
+		Param[0]->value = Eigen::MatrixXd::NullaryExpr(input, output, [&]() {return dist(rng); });
+		Param[1]->value = Eigen::MatrixXd::NullaryExpr(1, output, [&]() {return dist(rng); });
+
+		Param[0]->regL2 = 1.0;
+		Param[1]->regL2 = 0.0;
 	};
 
-	~Linear() {};
+	~Linear() {
+		auto Param = getParam();
+
+		delete Param[0];
+		delete Param[1];
+	};
 
 	virtual Eigen::MatrixXd forward(Eigen::MatrixXd panIn) override;
 	virtual Eigen::MatrixXd backward(Eigen::MatrixXd preDiff) override;
-
-	void step(double learningRate);
 
 	Eigen::MatrixXd getWeight();
 	Eigen::MatrixXd getBias();

@@ -15,9 +15,8 @@ public:
         for (auto l : Layers) {
             if (l->isLearnable()) {
                 auto p = ((Learnable*)l)->getParam();
-                auto g = ((Learnable*)l)->getGrad();
 
-                this->addParam(p, g);
+                this->addParam(p);
             }
         }
     };

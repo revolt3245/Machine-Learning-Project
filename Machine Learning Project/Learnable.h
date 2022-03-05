@@ -6,44 +6,32 @@
 
 #include "Layer.h"
 
+struct Parameter {
+    Eigen::MatrixXd value;
+    Eigen::MatrixXd grad;
+
+    double regL2;
+};
+
 class Learnable :
     public Layer
 {
 public:
     friend class Optimizer;
     Learnable(string name) 
-        :Layer(name, true), param(0), grad(0), regL2(0) {};
+        :Layer(name, true), param(0) {};
     Learnable(string name, size_t n) 
-        :Layer(name, true), param(n), grad(n), regL2(n) {
-        for (int i = 0; i < n; i++) {
-            param[i] = new Eigen::MatrixXd;
-            grad[i] = new Eigen::MatrixXd;
-        }
-    };
+        :Layer(name, true), param(n) {};
 
-    ~Learnable() {
-        for (auto& p : param) {
-            delete p;
-        }
-        for (auto& g : grad) {
-            delete g;
-        }
-    };
+    ~Learnable() {};
 
-    vector<Eigen::MatrixXd*> getParam();
-    vector<Eigen::MatrixXd*> getGrad();
-    vector<double> getL2Regularization();
+    vector<Parameter*> getParam();
+    void addParam(Parameter* param);
+    void addParam(vector<Parameter*> params);
 
-    void addParam(Eigen::MatrixXd* param);
-    void addParam(Eigen::MatrixXd* param, Eigen::MatrixXd* grad);
-
-    void addParam(vector<Eigen::MatrixXd*> params);
-    void addParam(vector<Eigen::MatrixXd*> params, vector<Eigen::MatrixXd*> grads);;
-    void setL2Regularization(vector<double> regL2);
-    void setL2Regularization(size_t idx, double regL2);
+    void allocParam();
+    void deleteParam();
 private:
-    vector<Eigen::MatrixXd*> param;
-    vector<Eigen::MatrixXd*> grad;
-    vector<double> regL2;
+    vector<Parameter*> param;
 };
 

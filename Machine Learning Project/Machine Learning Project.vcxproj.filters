@@ -159,7 +159,4 @@
       <Filter>헤더 파일\Layer\Activation</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
-  </ItemGroup>
 </Project>

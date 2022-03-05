@@ -2,14 +2,14 @@
 
 Eigen::MatrixXd ReLU::forward(Eigen::MatrixXd panIn)
 {
-    this->panOut = (panIn.array() >= 0).matrix();
+    this->panOut = (panIn.array() >= 0).cast<double>().matrix();
     Eigen::MatrixXd Out = (this->panOut.array() * panIn.array()).matrix();
     return Out;
 }
 
 Eigen::MatrixXd ReLU::backward(Eigen::MatrixXd preDiff)
 {
-    return this->panOut;
+    return (this->panOut.array() * preDiff.array()).matrix();
 }
 
 ostream& ReLU::printConfig(ostream& os)
