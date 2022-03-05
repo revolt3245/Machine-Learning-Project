@@ -22,9 +22,10 @@ public:
 	void setLearningRate(double learningRate);
 	void setL2Regularization(double regL2);
 protected:
-	vector<Eigen::MatrixXd*> getLearnableParam(Learnable* obj);
-	vector<Eigen::MatrixXd*> getLearnableGrad(Learnable* obj);
-	vector<double> getLearnableL2Regularization(Learnable* obj);
+	//vector<Eigen::MatrixXd*> getLearnableParam(Learnable* obj);
+	//vector<Eigen::MatrixXd*> getLearnableGrad(Learnable* obj);
+	//vector<double> getLearnableL2Regularization(Learnable* obj);
+	vector<Parameter*> getLearnableParam(Learnable* obj);
 private:
 	double learningRate;
 	double regL2;
