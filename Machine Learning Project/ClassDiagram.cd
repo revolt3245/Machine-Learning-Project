@@ -5,13 +5,6 @@
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
-    <NestedTypes>
-      <Enum Name="CELoss::CELossType" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>CELoss.h</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAgAAAAAAgAAAAAACAAAAAgABAAAAAAEAAAgAAAA=</HashCode>
       <FileName>CELoss.h</FileName>

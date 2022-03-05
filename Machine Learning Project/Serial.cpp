@@ -36,7 +36,7 @@ ostream& Serial::printConfig(ostream& os)
 ostream& Serial::printConfig(ostream& os, unsigned int level)
 {
     for (auto i = 0; i < level; i++) {
-        os << "\t";
+        os << "    ";
     }
     os << this->getName() << " (" << "\n";
     for (auto l : this->Layers) {
@@ -44,7 +44,7 @@ ostream& Serial::printConfig(ostream& os, unsigned int level)
         os << "\n";
     }
     for (auto i = 0; i < level; i++) {
-        os << "\t";
+        os << "    ";
     }
     os << ")";
 

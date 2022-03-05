@@ -150,6 +150,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MSELoss.cpp" />
     <ClCompile Include="Optimizer.cpp" />
+    <ClCompile Include="Parallel.cpp" />
     <ClCompile Include="ReLU.cpp" />
     <ClCompile Include="Serial.cpp" />
     <ClCompile Include="SGD.cpp" />
@@ -170,6 +171,7 @@
     <ClInclude Include="Linear.h" />
     <ClInclude Include="MSELoss.h" />
     <ClInclude Include="Optimizer.h" />
+    <ClInclude Include="Parallel.h" />
     <ClInclude Include="ReLU.h" />
     <ClInclude Include="Serial.h" />
     <ClInclude Include="SGD.h" />

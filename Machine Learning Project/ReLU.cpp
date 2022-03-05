@@ -21,7 +21,7 @@ ostream& ReLU::printConfig(ostream& os)
 ostream& ReLU::printConfig(ostream& os, unsigned int level)
 {
     for (auto i = 0; i < level; i++) {
-        os << "\t";
+        os << "    ";
     }
     os << this->getName();
 

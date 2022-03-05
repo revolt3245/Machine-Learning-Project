@@ -46,5 +46,7 @@ int main() {
 
 	cout << Net.forward(X) << "\n";
 
+	cout << Net << "\n";
+
 	return 0;
 }
