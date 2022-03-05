@@ -22,6 +22,8 @@ public:
         }
     };
 
+    ~Serial() {};
+
     virtual Eigen::MatrixXd forward(Eigen::MatrixXd panIn) override;
     virtual Eigen::MatrixXd backward(Eigen::MatrixXd preDiff) override;
 
