@@ -42,7 +42,7 @@
       <FileName>Linear.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Serial" Collapsed="true">
+  <Class Name="Serial">
     <Position X="3" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAgAAAAAAgAAAAAAAAAAAAhAAAAAEAAAAAAAAAAA=</HashCode>
@@ -80,7 +80,7 @@
   <Class Name="ReLU" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAgAAAAAAgAAAAAAAAACAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAgAAAIAAgAAAAAAAAACAAgAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>ReLU.h</FileName>
     </TypeIdentifier>
   </Class>
