@@ -6,6 +6,13 @@
 
 #include "Layer.h"
 
+struct Parameter {
+    Eigen::MatrixXd value;
+    Eigen::MatrixXd grad;
+
+    double regL2;
+};
+
 class Learnable :
     public Layer
 {
