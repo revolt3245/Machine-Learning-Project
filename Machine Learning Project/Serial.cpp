@@ -12,7 +12,7 @@ Eigen::MatrixXd Serial::backward(Eigen::MatrixXd preDiff)
 
 ostream& Serial::printConfig(ostream& os)
 {
-    os << "Serial (" << "\n";
+    os << this->getName() << " (" << "\n";
     for (auto l : this->Layers) {
         l->printConfig(os, 1);
         os << "\n";
@@ -27,7 +27,7 @@ ostream& Serial::printConfig(ostream& os, unsigned int level)
     for (auto i = 0; i < level; i++) {
         os << "\t";
     }
-    os << "Serial (" << "\n";
+    os << this->getName() << " (" << "\n";
     for (auto l : this->Layers) {
         l->printConfig(os, level + 1);
         os << "\n";
