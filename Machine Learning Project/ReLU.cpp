@@ -2,19 +2,28 @@
 
 Eigen::MatrixXd ReLU::forward(Eigen::MatrixXd panIn)
 {
-    return Eigen::MatrixXd();
+    this->panOut = (panIn.array() >= 0).matrix();
+    Eigen::MatrixXd Out = (this->panOut.array() * panIn.array()).matrix();
+    return Out;
 }
 
 Eigen::MatrixXd ReLU::backward(Eigen::MatrixXd preDiff)
 {
-    return Eigen::MatrixXd();
+    return this->panOut;
 }
 
 ostream& ReLU::printConfig(ostream& os)
 {
+    os << this->getName();
+    return os;
 }
 
 ostream& ReLU::printConfig(ostream& os, unsigned int level)
 {
-    // // O: 여기에 return 문을 삽입합니다.
+    for (auto i = 0; i < level; i++) {
+        os << "\t";
+    }
+    os << this->getName();
+
+    return os;
 }

@@ -11,6 +11,9 @@ class ReLU :
     public Layer
 {
 public:
+    ReLU() :Layer("ReLU") {};
+    ~ReLU() {};
+
     virtual Eigen::MatrixXd forward(Eigen::MatrixXd panIn) override;
     virtual Eigen::MatrixXd backward(Eigen::MatrixXd preDiff) override;
     virtual ostream& printConfig(ostream& os) override;
