@@ -147,4 +147,7 @@
       <Filter>헤더 파일\Layer\Learnable</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
 </Project>
