@@ -11,7 +11,12 @@ class Activation :
     public Layer
 {
 public:
-private:
+    Activation(string name) :Layer(name, false) {};
+    ~Activation() {};
 
+    Eigen::MatrixXd getPanOut();
+    void setPanOut(Eigen::MatrixXd panOut);
+private:
+    Eigen::MatrixXd panOut;
 };
 

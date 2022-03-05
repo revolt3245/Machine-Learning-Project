@@ -2,13 +2,13 @@
 
 Eigen::MatrixXd Sigmoid::forward(Eigen::MatrixXd panIn)
 {
-    this->panOut = panIn.array().logistic().matrix();
-    return this->panOut;
+    this->setPanOut(panIn.array().logistic().matrix());
+    return this->getPanOut();
 }
 
 Eigen::MatrixXd Sigmoid::backward(Eigen::MatrixXd preDiff)
 {
-    return (panOut.array() * (1 - panOut.array()) * preDiff.array()).matrix();
+    return (this->getPanOut().array() * (1 - this->getPanOut().array()) * preDiff.array()).matrix();
 }
 
 ostream& Sigmoid::printConfig(ostream& os)

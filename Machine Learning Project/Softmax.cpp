@@ -7,14 +7,14 @@ Eigen::MatrixXd Softmax::forward(Eigen::MatrixXd panIn)
 
 	Eigen::MatrixXd Sum = expPanIn * Eigen::MatrixXd::Ones(inputSize, 1) * Eigen::MatrixXd::Ones(1, inputSize);
 
-	this->panOut = (expPanIn.array() / Sum.array()).matrix();
+	this->setPanOut((expPanIn.array() / Sum.array()).matrix());
 
-	return panOut;
+	return this->getPanOut();
 }
 
 Eigen::MatrixXd Softmax::backward(Eigen::MatrixXd preDiff)
 {
-	auto Diff = panOut.array() * (1 - panOut.array());
+	auto Diff = this->getPanOut().array() * (1 - this->getPanOut().array());
 
 	return (Diff * preDiff.array()).matrix();
 }
