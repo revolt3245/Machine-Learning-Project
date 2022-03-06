@@ -144,7 +144,9 @@
     <ClCompile Include="Activation.cpp" />
     <ClCompile Include="CELoss.cpp" />
     <ClCompile Include="Criterion.cpp" />
+    <ClCompile Include="ELU.cpp" />
     <ClCompile Include="Layer.cpp" />
+    <ClCompile Include="LeakyReLU.cpp" />
     <ClCompile Include="Learnable.cpp" />
     <ClCompile Include="Linear.cpp" />
     <ClCompile Include="main.cpp" />
@@ -156,17 +158,20 @@
     <ClCompile Include="SGD.cpp" />
     <ClCompile Include="Sigmoid.cpp" />
     <ClCompile Include="Softmax.cpp" />
+    <ClCompile Include="Tanh.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Activation.h" />
     <ClInclude Include="CELoss.h" />
     <ClInclude Include="Criterion.h" />
+    <ClInclude Include="ELU.h" />
     <ClInclude Include="hActivation.h" />
     <ClInclude Include="hCriterion.h" />
     <ClInclude Include="hLearnable.h" />
     <ClInclude Include="hOptimizer.h" />
     <ClInclude Include="Layer.h" />
     <ClInclude Include="hLayer.h" />
+    <ClInclude Include="LeakyReLU.h" />
     <ClInclude Include="Learnable.h" />
     <ClInclude Include="Linear.h" />
     <ClInclude Include="MSELoss.h" />
@@ -177,6 +182,7 @@
     <ClInclude Include="SGD.h" />
     <ClInclude Include="Sigmoid.h" />
     <ClInclude Include="Softmax.h" />
+    <ClInclude Include="Tanh.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

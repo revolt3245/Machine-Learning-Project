@@ -2,9 +2,6 @@
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="CELoss" Collapsed="true">
     <Position X="0.5" Y="5.75" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Nested Types" Collapsed="false" />
-    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAgAAAAAAgAAAAAACAAAAAgABAAAAAAEAAAgAAAA=</HashCode>
       <FileName>CELoss.h</FileName>
@@ -25,59 +22,87 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Layer" Collapsed="true">
-    <Position X="5.25" Y="0.5" Width="1.5" />
+    <Position X="10.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAgAAAAAAgAAAAAAAAAAAAiAEAAAEAAAEAAAAAAA=</HashCode>
       <FileName>Layer.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Learnable" Collapsed="true">
-    <Position X="8.75" Y="1.75" Width="1.5" />
+    <Position X="3.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAAAAABAIAAAAAAAIAAAIIAAgAAAAAA=</HashCode>
       <FileName>Learnable.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Linear" Collapsed="true">
-    <Position X="7.5" Y="3.25" Width="1.5" />
+    <Position X="1.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAgEgAAAAgAgAAAAAAAAACgAAABAAAAAAIAAAAAA=</HashCode>
       <FileName>Linear.h</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Parallel" Collapsed="true">
+    <Position X="3.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAQAgAAAAAAAAAAAAgAAAAIEAAAAACAAAAA=</HashCode>
+      <FileName>Parallel.h</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="Serial" Collapsed="true">
-    <Position X="9.75" Y="3.25" Width="1.5" />
+    <Position X="5.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAgAAAAAAgAAAAAAAAAAAAhAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>Serial.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Activation" Collapsed="true">
-    <Position X="3" Y="1.75" Width="1.5" />
+    <Position X="13.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAgAAACAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAEAA=</HashCode>
       <FileName>Activation.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ReLU" Collapsed="true">
-    <Position X="0.75" Y="3.25" Width="1.5" />
+    <Position X="8" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAgAAAIAAgAAAAAAAAAAAAgAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>ReLU.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sigmoid" Collapsed="true">
-    <Position X="3" Y="3.25" Width="1.5" />
+    <Position X="12.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAgAAAAAAgAAAAAAAAAAAAgAAAAAAAAAEAAAAAAA=</HashCode>
       <FileName>Sigmoid.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Softmax" Collapsed="true">
-    <Position X="5.25" Y="3.25" Width="1.5" />
+    <Position X="14.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIgAAAAAAgAAAAAAAAAAAAgAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>Softmax.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ELU" Collapsed="true">
+    <Position X="17" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ELU.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeakyReLU" Collapsed="true">
+    <Position X="19.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LeakyReLU.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tanh" Collapsed="true">
+    <Position X="10.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tanh.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Optimizer" Collapsed="true">
@@ -95,7 +120,7 @@
     </TypeIdentifier>
   </Class>
   <Struct Name="Parameter" Collapsed="true">
-    <Position X="12.25" Y="1.5" Width="1.5" />
+    <Position X="21.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAIAAAAAAAAgAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
       <FileName>Learnable.h</FileName>

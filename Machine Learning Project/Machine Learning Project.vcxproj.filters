@@ -105,6 +105,15 @@
     <ClCompile Include="Parallel.cpp">
       <Filter>소스 파일\Layer\Learnable</Filter>
     </ClCompile>
+    <ClCompile Include="Tanh.cpp">
+      <Filter>소스 파일\Layer\Activation</Filter>
+    </ClCompile>
+    <ClCompile Include="LeakyReLU.cpp">
+      <Filter>소스 파일\Layer\Activation</Filter>
+    </ClCompile>
+    <ClCompile Include="ELU.cpp">
+      <Filter>소스 파일\Layer\Activation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CELoss.h">
@@ -163,6 +172,15 @@
     </ClInclude>
     <ClInclude Include="Parallel.h">
       <Filter>헤더 파일\Layer\Learnable</Filter>
+    </ClInclude>
+    <ClInclude Include="ELU.h">
+      <Filter>헤더 파일\Layer\Activation</Filter>
+    </ClInclude>
+    <ClInclude Include="LeakyReLU.h">
+      <Filter>헤더 파일\Layer\Activation</Filter>
+    </ClInclude>
+    <ClInclude Include="Tanh.h">
+      <Filter>헤더 파일\Layer\Activation</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
