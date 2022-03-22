@@ -2,7 +2,21 @@
 
 Eigen::MatrixXd Parallel::forward(Eigen::MatrixXd panIn)
 {
-	return Eigen::MatrixXd();
+	//Fork Mapping
+	vector<Eigen::MatrixXd> Fork(0);
+
+	Eigen::MatrixXd res = Eigen::MatrixXd::Zero(panIn.rows(), JoinMapping[0].cols());
+
+	for (auto& f : this->ForkMapping) {
+		Fork.push_back(panIn * f);
+	}
+
+	for (auto i = 0; i < this->Layers.size(); i++) {
+		Fork[i] = this->Layers[i]->forward(Fork[i]);
+		res += Fork[i] * JoinMapping[i];
+	}
+
+	return res;
 }
 
 Eigen::MatrixXd Parallel::backward(Eigen::MatrixXd preDiff)
